@@ -1,3 +1,4 @@
+/* Cabeçalho */
 .menu {
     display: flex;
     justify-content: space-evenly;
@@ -6,13 +7,57 @@
     column-gap: 36px;
 }
 
+/* Categorias */
+.categorias__lista {
+    display: flex;
+    flex-direction: column;
+    /*gap: 1em;*/
+    row-gap: .5rem;
+}
+
+.destaques {
+    display: flex;
+    align-items: center;
+    gap: 10px; /*mesmo efeito de colum-gap, pois este elemento e unico e nao tem elementos ao lado para serem espacados com a propriedade gap*/
+}
+
+.destaques__barra {
+    flex-grow: 1;
+}
+
+.eventos__lista, .agenda__lista {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem 1.5rem;
+    justify-content: center;
+}
+
+.eventos__item, .agenda__item {
+    flex-grow: 1;
+    max-width: 400px;
+}
+
 @media screen and (min-width: 720px) {
+    /* Cabeçalho */
     .menu {
         column-gap: 75px;
+    }
+
+    /* Categorias */
+    .categorias__lista {
+        flex-wrap: wrap;
+        column-gap: 1.5rem;
+        row-gap: 1rem;
+    }
+
+    .eventos__lista, .agenda__lista {
+        justify-content: end;
     }
 }
 
 @media screen and (min-width: 1440px){
+    /* Cabeçalho */
     .menu {
         column-gap: 105px;
         flex-wrap: nowrap;
